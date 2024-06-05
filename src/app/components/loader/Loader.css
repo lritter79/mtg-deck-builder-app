@@ -1,0 +1,60 @@
+.loader {
+    width: 300px;
+    height: 300px;
+    position: relative;
+  }
+  
+  .loader p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+@keyframes circularAnimation {
+    0% {
+        transform: rotate(0deg) 
+            translateX(100px) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg) 
+            translateX(100px) rotate(360deg);
+    }
+}
+
+
+
+.loader > .sphere {
+    top:125px;
+    left:125px;
+    position: absolute;
+    animation: circularAnimation 6s linear infinite; /* Circular animation */
+
+}
+
+.loader > .sphere.green {
+    animation-delay: -1s;
+}
+
+.loader > .sphere.red {
+    animation-delay: -2s;
+}
+
+
+.loader > .sphere.blue {
+    animation-delay: -3s;
+}
+
+.loader > .sphere.grey {
+    animation-delay: -4s;
+}
+
+.loader > .sphere.black {
+    animation-delay: -5s;
+}
+
+.loader > .sphere.white {
+    animation-delay: -6s;
+}
+
+  

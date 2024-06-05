@@ -1,0 +1,75 @@
+.sphere {
+    position: relative;
+    width: 45px;
+    height: 45px;
+  }
+  
+  .circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color, #d2c9c6);
+    border-radius: 50%;
+    opacity: 0.8;
+    overflow: hidden;
+  }
+  
+  .reflection {
+    position: absolute;
+    top: -40%;
+    left: -40%;
+    width: 180%;
+    height: 180%;
+    background: radial-gradient(
+      ellipse at top left,
+      rgba(255, 255, 255, 0.8),
+      transparent 60%
+    );
+    transform: rotate(45deg);
+  }
+  
+  .shadow {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    width: 30px;
+    height: 5px;
+    background-color: #333;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    opacity: 0.5;
+  }
+
+
+
+  /* Background color classes */
+  .sphere.green {
+    --background-color: #9bd2ad;
+
+  }
+  
+  .sphere.red {
+    --background-color: #f9b39a;
+
+  }
+  
+  .sphere.blue {
+    --background-color: #ace0fa;
+
+  }
+  
+  .sphere.grey {
+    --background-color: #cec3c1;
+
+  }
+  
+  .sphere.black {
+    --background-color: #686463;
+
+  }
+  
+  .sphere.white {
+    --background-color: #f8f7d3;
+
+  }
+  

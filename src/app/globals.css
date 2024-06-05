@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.jaceNeonText {
+    color:#f2f1f1;
+    text-shadow:
+    0 0 7px #51b2c8,
+    0 0 10px #51b2c8,
+    0 0 21px #51b2c8,
+    0 0 42px #51b2c8,
+    0 0 82px #51b2c8;
+    transition: text-shadow 0.5s, color 0.5s;
+  }
+
+.jaceNeonText:hover {
+  color:#fff;
+  text-shadow:
+        0 0 7px #84cfdb,
+        0 0 10px #84cfdb,
+        0 0 21px #84cfdb,
+        0 0 42px #84cfdb,
+        0 0 82px #84cfdb;
+}
+
+
+.checkbox-red {
+  --checkbox-color: #f9b39a; /* Red color */
+}
+
+.checkbox-green {
+  --checkbox-color: #9bd2ad; /* Green color */
+}
+
+.checkbox-white {
+  --checkbox-color: #f8f7d3; /* White color */
+}
+
+.checkbox-black {
+  --checkbox-color: #d2c9c6; /* Black color */
+  /* black var #686463 */
+}
+
+.checkbox-blue {
+  --checkbox-color: #ace0fa; /* Blue color */
+}
+
+.checkbox-colorless {
+  --checkbox-color: #cec3c1; /* Grey color */
+}
+/* Default checkbox styles */
+.form-checkbox {
+  position: relative;
+  width: 1.25rem;
+  height: 1.25rem;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  transition: border-color 0.2s;
+  border-radius: 4px;
+  /* Updated border styles for checked state */
+  border: 2px solid #cbd5e0;
+  box-shadow: inset 0 0 0 2px transparent;
+}
+
+.form-checkbox:disabled {
+  border: 2px solid rgb(55 65 81);
+}
+
+/* Custom checkbox styles for each color */
+.form-checkbox:before {
+  /* Check mark pseudo-element */
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.2;
+  background-color: var(--checkbox-color);
+  width: 0.75rem;
+  height: 2px;
+}
+
+/* Checked state styles for each color */
+.form-checkbox:checked {
+  /* Updated border and box shadow styles for checked state */
+  border-color: var(--checkbox-color);
+  box-shadow: inset 0 0 0 2px var(--checkbox-color);
+}
+
+.form-checkbox:checked:before {
+  /* Style of the check mark when the checkbox is checked */
+  opacity: 1;
+  /* Adjust the checkmark shape */
+  transform: translate(-50%, -50%) rotate(315deg) scaleX(0.6);
+}
+
+/* Hover styles for each color */
+.form-checkbox:not(:disabled):hover {
+  /* Style when the checkbox is hovered */
+  border-color: var(--checkbox-color);
+}
+
+/* Hover styles for the check mark for each color */
+.form-checkbox:not(:disabled):hover:before {
+  /* Style of the check mark when the checkbox is hovered */
+  opacity: 1;
+}
